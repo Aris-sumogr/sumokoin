@@ -3,7 +3,7 @@ on: [push, pull_request]
 
 jobs:
   cross-build-32-bit-linux-on-xenial:
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-16.04 
     steps:
     - uses: actions/checkout@v1
       with:
