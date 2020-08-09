@@ -15,7 +15,7 @@ jobs:
     - uses: eine/setup-msys2@v1
       with:
         update: true
-        install: g++-mingw-w64-i686 mingw-w64-i686-bc python3
+        install: mingw-w64-i686-gcc mingw-w64-i686-bc python3
     - name: build sumokoin
       run: make depends target=i686-linux-gnu -j2
       
