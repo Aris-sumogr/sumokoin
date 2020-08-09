@@ -25,7 +25,7 @@ jobs:
         sudo apt update
     - name: install sumokoin dependencies
       run: |
-        sudo apt -y install make g++-7 gcc-7 g++-multilib bc autoconf automake libtool gperf gcc- gcc-5- gcc-5-multilib- gcc-multilib- libx32gcc-5-dev-
+        sudo apt -y install make g++-7 gcc-7 g++-7-multilib bc autoconf automake libtool gperf gcc- gcc-5- gcc-5-multilib- gcc-multilib- libx32gcc-5-dev-
         sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 60 \
                         --slave /usr/bin/g++ g++ /usr/bin/g++-7                                  
     - name: build sumokoin
