@@ -24,8 +24,6 @@ jobs:
         sudo apt update
     - name: install sumokoin dependencies
       run: |
-        sudo apt -y install dpkg-dev libc6-dev make g++-7-multilib g++7 gcc-7 bc autoconf automake libtool gperf libssl-dev cmake miniupnpc libunbound-dev libevent-dev graphviz doxygen pkg-config libsodium-dev libhidapi-dev libnorm-dev libusb-1.0-0-dev libpgm-dev libudev-dev libtool autoconf automake python libtinfo5
-        sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 60 \
-                         --slave /usr/bin/g++ g++ /usr/bin/g++-7        
+        sudo apt -y install dpkg-dev make g++-7-multilib gcc-7-multilib bc autoconf automake libtool gperf libssl-dev cmake miniupnpc libunbound-dev libevent-dev graphviz doxygen pkg-config libsodium-dev libhidapi-dev libnorm-dev libusb-1.0-0-dev libpgm-dev libudev-dev libtool autoconf automake python libtinfo5  
     - name: build sumokoin
       run: make depends target=i686-linux-gnu  
