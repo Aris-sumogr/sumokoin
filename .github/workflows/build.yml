@@ -3,7 +3,6 @@ name: Continuous_Integration_Testing
 on: [push, pull_request]
 
 jobs:
-
   cross-build-32-bit-linux-on-xenial:
     runs-on: ubuntu-16.04
     steps:
