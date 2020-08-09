@@ -21,6 +21,7 @@ jobs:
     - name: update apt
       run: |
         sudo add-apt-repository universe
+        sudo add-apt-repository multiiverse
         sudo apt update
     - name: install sumokoin dependencies
       run: |
