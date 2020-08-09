@@ -22,11 +22,11 @@ jobs:
         echo "Acquire::ftp::Timeout \"120\";" | sudo tee -a /etc/apt/apt.conf.d/80-custom
     - name: update apt
       run: |
-        sudo add-apt-repository universe
-        sudo add-apt-repository multiverse
+        sudo add-apt-repository ppa:jonathonf/gcc-7.1
+        sudo apt-get update
         sudo apt update
     - name: install sumokoin dependencies
       run: |
-        sudo apt -y install make g++-7 gcc-7 gcc-7-i686-linux-gnu g++-7-multilib bc autoconf automake libtool gperf g++-5- gcc-5                            
+        sudo apt -y install make g++-7 gcc-7 gcc-7-i686-linux-gnu g++-7-multilib bc autoconf automake libtool gperf g++-5- gcc-5-                            
     - name: build sumokoin
       run: make depends target=i686-linux-gnu  
